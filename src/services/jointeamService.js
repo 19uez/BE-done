@@ -24,7 +24,7 @@ let checkUserOnTeam = (data) => {
 let addUserOnTeam = (data) => {
     return new Promise(async (resolve, reject) => {
         try {
-            // let check = checkUserOnTeam(data);
+            // let check = await checkUserOnTeam(data);
             if (false) {
                 resolve({
                     errCode: 2,
@@ -102,7 +102,7 @@ let getAllUserOnTeam = (teamId) => {
                 let _user = await db.User.findOne({
                     where: { id: users[i].idUser },
                     attributes: {
-                        exclude: ['password']
+                        exclude: ['password', 'image']
                     }
                 })
                 user[i] = _user;

@@ -223,7 +223,7 @@ let joininProject = (data) => {
 
             })
             if (user && project) {
-                // let check = checkjoinProject(data.idProject, data.idUser);
+                // let check = await checkjoinProject(data.idProject, data.idUser);
                 if (false) {
                     resolve({
                         errCode: 5,

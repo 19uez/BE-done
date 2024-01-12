@@ -16,7 +16,9 @@ let getAllTeam = (teamId) => {
                     where: { id: teamId },
                     attributes: {
                         // exclude:['password']
-                    }
+                    },
+
+
                 })
             }
             resolve(teams)

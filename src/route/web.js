@@ -5,6 +5,7 @@ import userController from "../controllers/userController";
 import projectController from "../controllers/projectController";
 import teamController from "../controllers/teamController";
 import jointeamController from "../controllers/jointeamController";
+import joinprojectController from "../controllers/joinprojectController"
 
 
 let router = express.Router();
@@ -54,7 +55,8 @@ let initWebRoutes = (app) => {
     router.put('/api/edit-project', projectController.handleEditProject);
     router.delete('/api/delete-project', projectController.handleDeleteProject);
     router.post('/api/add-user-project', projectController.handleJoinProject);
-    router.delete('/api/delete-userfromproject', projectController.handleDeleteUserFromProject)
+    router.delete('/api/delete-userfromproject', projectController.handleDeleteUserFromProject);
+    router.get('/api/get-all-user-project', joinprojectController.handleGetAllUserOnProject);
     //project
     //Long lam
     router.get('/api/get-detail-project-by-id', projectController.getDetailProjectById)

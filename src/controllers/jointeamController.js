@@ -16,7 +16,7 @@ let handleDeleteUserOnTeam = async (req, res) => {
   return res.status(200).json(message);
 }
 let handleGetAllUserOnTeam = async (req, res) => {
-  let id = req.body.id;
+  let id = req.query.id;
   if (!id) {
     return res.status(200).json({
       errCode: 1,
